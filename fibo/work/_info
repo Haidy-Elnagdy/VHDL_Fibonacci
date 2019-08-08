@@ -1,0 +1,458 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/projects/labs
+Eadder_8bit
+Z0 w1564315885
+Z1 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/projects/fibonacci
+Z5 8C:\projects\fibonacci\adder_8bit.vhd
+Z6 FC:\projects\fibonacci\adder_8bit.vhd
+l0
+L7
+Vi?m_><zUS`?V_B:5X>PD@1
+!s100 iDZIzZ5SD_cdTFnDk<?:V3
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1564316037
+!i10b 1
+Z9 !s108 1564316037.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\projects\fibonacci\adder_8bit.vhd|
+Z11 !s107 C:\projects\fibonacci\adder_8bit.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R1
+R2
+R3
+DEx4 work 10 adder_8bit 0 22 i?m_><zUS`?V_B:5X>PD@1
+l14
+L12
+V<132A[PEBeY<O5dOONKEV2
+!s100 k7kfFT@A4h90@kIV[C>dz3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ecomp_equ
+Z14 w1564400124
+R1
+R2
+R3
+R4
+Z15 8C:\projects\fibonacci\comp_neq.vhd
+Z16 FC:\projects\fibonacci\comp_neq.vhd
+l0
+L7
+V6a3C^=nEXb?D2P0fQ0SjW3
+!s100 MIb4hTaf8gb[Og[VYT]:62
+R7
+32
+Z17 !s110 1564400129
+!i10b 1
+Z18 !s108 1564400129.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\projects\fibonacci\comp_neq.vhd|
+Z20 !s107 C:\projects\fibonacci\comp_neq.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+DEx4 work 8 comp_equ 0 22 6a3C^=nEXb?D2P0fQ0SjW3
+l14
+L12
+VcXMH?Of2PRJ4gh6?OA<K21
+!s100 G@B@SM1_QmM@8MUi`;W?g1
+R7
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Ecount_dec
+Z21 w1564399787
+R1
+R2
+R3
+R4
+Z22 8C:\projects\fibonacci\count_dec.vhd
+Z23 FC:\projects\fibonacci\count_dec.vhd
+l0
+L6
+VUdNSN5:CS9Q=CR]Oz;^Re0
+!s100 _4N>5XK5i>zRA9E[g<H9_0
+R7
+32
+Z24 !s110 1564399793
+!i10b 1
+Z25 !s108 1564399793.000000
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\projects\fibonacci\count_dec.vhd|
+Z27 !s107 C:\projects\fibonacci\count_dec.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+DEx4 work 9 count_dec 0 22 UdNSN5:CS9Q=CR]Oz;^Re0
+l14
+L12
+VTj7Y]if??RkQ[SK7IJEQ?2
+!s100 5iS:1`1b8dcoDBQN93c6]1
+R7
+32
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R12
+R13
+Efibo
+Z28 w1564483762
+Z29 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
+Z30 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
+Z31 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z32 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+Z33 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+R2
+R3
+Z34 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+R4
+Z35 8C:/projects/fibonacci/quartus/fibo/simulation/modelsim/fibo.vho
+Z36 FC:/projects/fibonacci/quartus/fibo/simulation/modelsim/fibo.vho
+l0
+L79
+V=nZl4^ILQPABQiXA;@b8`2
+!s100 ]zbN0?RTQcGTFhKJ?H@AD0
+R7
+32
+Z37 !s110 1564484029
+!i10b 1
+Z38 !s108 1564484028.000000
+Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/projects/fibonacci/quartus/fibo/simulation/modelsim/fibo.vho|
+Z40 !s107 C:/projects/fibonacci/quartus/fibo/simulation/modelsim/fibo.vho|
+!i113 1
+R12
+R13
+Astructure
+R29
+R30
+R31
+R32
+R33
+R2
+R3
+R34
+DEx4 work 4 fibo 0 22 =nZl4^ILQPABQiXA;@b8`2
+l212
+L107
+V6U9JK1<FF;0G9f_J@jh4R1
+!s100 eEjQzg=o2SZEfCV^4Dh>I0
+R7
+32
+R37
+!i10b 1
+R38
+R39
+R40
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+DEx4 work 4 fibo 0 22 `91z4;C<ahj<YgeB;0PB>1
+l29
+L13
+VajX_cXXETXPWkE?h8SN0G1
+!s100 SBiNDeOgL=?H[FMo=cUQk2
+R7
+32
+!s110 1564416156
+!i10b 1
+!s108 1564416156.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\projects\fibonacci\fibo.vhd|
+!s107 C:\projects\fibonacci\fibo.vhd|
+!i113 1
+R12
+R13
+FC:\projects\fibonacci\fibo.vhd
+w1564416146
+8C:\projects\fibonacci\fibo.vhd
+Efibo_dp
+Z41 w1564415957
+R1
+R2
+R3
+R4
+Z42 8C:\projects\fibonacci\fibo_dp.vhd
+Z43 FC:\projects\fibonacci\fibo_dp.vhd
+l0
+L6
+V9>5j[3D8nNfbdHV[7f[dQ0
+!s100 7J9^MCCHSgo5V[l>iXI0G3
+R7
+32
+Z44 !s110 1564415966
+!i10b 1
+Z45 !s108 1564415966.000000
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\projects\fibonacci\fibo_dp.vhd|
+Z47 !s107 C:\projects\fibonacci\fibo_dp.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+DEx4 work 7 fibo_dp 0 22 9>5j[3D8nNfbdHV[7f[dQ0
+l44
+L13
+VJfb7a<`S:^0]fJH07iWlB1
+!s100 Xl1c>;LK`]2ETD]86V:XW2
+R7
+32
+R44
+!i10b 1
+R45
+R46
+R47
+!i113 1
+R12
+R13
+Efibo_fsm
+Z48 w1564484105
+R1
+R2
+R3
+R4
+Z49 8C:/projects/fibonacci/fibo_fsm.vhd
+Z50 FC:/projects/fibonacci/fibo_fsm.vhd
+l0
+L6
+V[JKICocS4M[hlZ^7[WQXF1
+!s100 RTVljYQi@e:Azk?2VWf?<1
+R7
+32
+Z51 !s110 1564484107
+!i10b 1
+Z52 !s108 1564484107.000000
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/projects/fibonacci/fibo_fsm.vhd|
+Z54 !s107 C:/projects/fibonacci/fibo_fsm.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+Z55 DEx4 work 8 fibo_fsm 0 22 [JKICocS4M[hlZ^7[WQXF1
+l15
+L11
+VQT;hSn^3e0b<glS^M1odz1
+!s100 j@K9]AeXmKlKYO4YDzi5T1
+R7
+32
+R51
+!i10b 1
+R52
+R53
+R54
+!i113 1
+R12
+R13
+Efibo_tb
+Z56 w1564417443
+R1
+R2
+R3
+R4
+Z57 8C:/projects/fibonacci/fibo_tb.vhd
+Z58 FC:/projects/fibonacci/fibo_tb.vhd
+l0
+L8
+VN@a=TXXFYe`9[PXN^ij641
+!s100 9SNV:<UBQWP`M49;zCCkn3
+R7
+32
+Z59 !s110 1564417448
+!i10b 1
+Z60 !s108 1564417448.000000
+Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/projects/fibonacci/fibo_tb.vhd|
+Z62 !s107 C:/projects/fibonacci/fibo_tb.vhd|
+!i113 1
+R12
+R13
+Abehav
+R1
+R2
+R3
+DEx4 work 7 fibo_tb 0 22 N@a=TXXFYe`9[PXN^ij641
+l23
+L11
+V4ozmWCQ=i0O?9WPoHcfcK0
+!s100 S4gXLj3Nj]`_5SIEl?:ZQ1
+R7
+32
+R59
+!i10b 1
+R60
+R61
+R62
+!i113 1
+R12
+R13
+Ehard_block
+R28
+R31
+R29
+R33
+R2
+R3
+R30
+R4
+R35
+R36
+l0
+L34
+VWG@jY=zkQS:_[C?Qh52FF3
+!s100 A`ID_i56<Ua56=ZD=[EG=2
+R7
+32
+R37
+!i10b 1
+R38
+R39
+R40
+!i113 1
+R12
+R13
+Astructure
+R31
+R29
+R33
+R2
+R3
+R30
+DEx4 work 10 hard_block 0 22 WG@jY=zkQS:_[C?Qh52FF3
+l64
+L50
+VTOhQSnCUNn`z;9YJKeA@a3
+!s100 2S?JL;LJ@<3:BHXTNcXS]3
+R7
+32
+R37
+!i10b 1
+R38
+R39
+R40
+!i113 1
+R12
+R13
+Emux2_1
+Z63 w1564315963
+R1
+R2
+R3
+R4
+Z64 8C:\projects\fibonacci\mux2_1.vhd
+Z65 FC:\projects\fibonacci\mux2_1.vhd
+l0
+L6
+VanTK1S4kI0CbBX9l3KG9O2
+!s100 G=4E<_e>OAll7P9^^7_aR0
+R7
+32
+Z66 !s110 1564316043
+!i10b 1
+Z67 !s108 1564316043.000000
+Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\projects\fibonacci\mux2_1.vhd|
+Z69 !s107 C:\projects\fibonacci\mux2_1.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+DEx4 work 6 mux2_1 0 22 anTK1S4kI0CbBX9l3KG9O2
+l14
+L12
+VGP:85zWW1Ye9QcV@?zAJd2
+!s100 g@N=SXE??^ELPiQEHm6Gg0
+R7
+32
+R66
+!i10b 1
+R67
+R68
+R69
+!i113 1
+R12
+R13
+Ereg_par_8bit_load
+Z70 w1564316004
+R1
+R2
+R3
+R4
+Z71 8C:\projects\fibonacci\par_reg_8bit_load.vhd
+Z72 FC:\projects\fibonacci\par_reg_8bit_load.vhd
+l0
+L6
+VCV:Ni@Vimee<cMYelM7fa2
+!s100 nc[8S<P_OAf^[[GY_n[cA2
+R7
+32
+Z73 !s110 1564316047
+!i10b 1
+Z74 !s108 1564316047.000000
+Z75 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\projects\fibonacci\par_reg_8bit_load.vhd|
+Z76 !s107 C:\projects\fibonacci\par_reg_8bit_load.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+DEx4 work 17 reg_par_8bit_load 0 22 CV:Ni@Vimee<cMYelM7fa2
+l13
+L12
+VVl<@`bT19fg=ah?f86J2J3
+!s100 @0e=HhLAJP4igQb>@J=9P0
+R7
+32
+R73
+!i10b 1
+R74
+R75
+R76
+!i113 1
+R12
+R13
