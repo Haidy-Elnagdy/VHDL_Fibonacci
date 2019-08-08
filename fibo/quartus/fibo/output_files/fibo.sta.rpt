@@ -1,0 +1,1228 @@
+Timing Analyzer report for fibo
+Tue Jul 30 12:55:55 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'clk'
+ 13. Slow 1200mV 85C Model Hold: 'clk'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'clk'
+ 22. Slow 1200mV 0C Model Hold: 'clk'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'clk'
+ 30. Fast 1200mV 0C Model Hold: 'clk'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Input Ports
+ 45. Unconstrained Output Ports
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; fibo                                                ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE22F17C6                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.2%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                        ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 531.07 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; -0.883 ; -22.017            ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.358 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -3.000 ; -40.000                          ;
++-------+--------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                                                                       ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.883 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.816      ;
+; -0.858 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.791      ;
+; -0.854 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.787      ;
+; -0.854 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.787      ;
+; -0.854 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; clk          ; clk         ; 1.000        ; -0.062     ; 1.787      ;
+; -0.854 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; clk          ; clk         ; 1.000        ; -0.062     ; 1.787      ;
+; -0.854 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.787      ;
+; -0.854 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; clk          ; clk         ; 1.000        ; -0.062     ; 1.787      ;
+; -0.854 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.787      ;
+; -0.854 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; clk          ; clk         ; 1.000        ; -0.062     ; 1.787      ;
+; -0.831 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[6] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.764      ;
+; -0.830 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.763      ;
+; -0.824 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.757      ;
+; -0.815 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.748      ;
+; -0.809 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.742      ;
+; -0.803 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.736      ;
+; -0.799 ; fibo_fsm:f2|current_state.s7                ; fibo_dp:f1|count_dec:dp5|temp[3]            ; clk          ; clk         ; 1.000        ; -0.062     ; 1.732      ;
+; -0.799 ; fibo_fsm:f2|current_state.s7                ; fibo_dp:f1|count_dec:dp5|temp[2]            ; clk          ; clk         ; 1.000        ; -0.062     ; 1.732      ;
+; -0.799 ; fibo_fsm:f2|current_state.s7                ; fibo_dp:f1|count_dec:dp5|temp[1]            ; clk          ; clk         ; 1.000        ; -0.062     ; 1.732      ;
+; -0.799 ; fibo_fsm:f2|current_state.s7                ; fibo_dp:f1|count_dec:dp5|temp[0]            ; clk          ; clk         ; 1.000        ; -0.062     ; 1.732      ;
+; -0.796 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.729      ;
+; -0.793 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.726      ;
+; -0.791 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.724      ;
+; -0.790 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.723      ;
+; -0.767 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.700      ;
+; -0.761 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.694      ;
+; -0.742 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.675      ;
+; -0.735 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.668      ;
+; -0.735 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|count_dec:dp5|temp[3]            ; clk          ; clk         ; 1.000        ; -0.063     ; 1.667      ;
+; -0.735 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|count_dec:dp5|temp[2]            ; clk          ; clk         ; 1.000        ; -0.063     ; 1.667      ;
+; -0.735 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|count_dec:dp5|temp[1]            ; clk          ; clk         ; 1.000        ; -0.063     ; 1.667      ;
+; -0.735 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|count_dec:dp5|temp[0]            ; clk          ; clk         ; 1.000        ; -0.063     ; 1.667      ;
+; -0.718 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.651      ;
+; -0.717 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.650      ;
+; -0.717 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.650      ;
+; -0.717 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; clk          ; clk         ; 1.000        ; -0.062     ; 1.650      ;
+; -0.717 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; clk          ; clk         ; 1.000        ; -0.062     ; 1.650      ;
+; -0.717 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.650      ;
+; -0.717 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; clk          ; clk         ; 1.000        ; -0.062     ; 1.650      ;
+; -0.717 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.650      ;
+; -0.717 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; clk          ; clk         ; 1.000        ; -0.062     ; 1.650      ;
+; -0.714 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.647      ;
+; -0.708 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.641      ;
+; -0.707 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.640      ;
+; -0.705 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[5]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.638      ;
+; -0.699 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.632      ;
+; -0.699 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[7]  ; clk          ; clk         ; 1.000        ; -0.062     ; 1.632      ;
+; -0.699 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.632      ;
+; -0.699 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[6]  ; clk          ; clk         ; 1.000        ; -0.062     ; 1.632      ;
+; -0.699 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[5]  ; clk          ; clk         ; 1.000        ; -0.062     ; 1.632      ;
+; -0.699 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.632      ;
+; -0.699 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.632      ;
+; -0.699 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; clk          ; clk         ; 1.000        ; -0.062     ; 1.632      ;
+; -0.699 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[5]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.632      ;
+; -0.699 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.632      ;
+; -0.693 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.626      ;
+; -0.687 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.620      ;
+; -0.685 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.618      ;
+; -0.680 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.613      ;
+; -0.679 ; fibo_dp:f1|count_dec:dp5|temp[0]            ; fibo_dp:f1|count_dec:dp5|temp[3]            ; clk          ; clk         ; 1.000        ; -0.062     ; 1.612      ;
+; -0.679 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.612      ;
+; -0.677 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.610      ;
+; -0.675 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.608      ;
+; -0.674 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.607      ;
+; -0.657 ; fibo_dp:f1|count_dec:dp5|temp[1]            ; fibo_dp:f1|count_dec:dp5|temp[3]            ; clk          ; clk         ; 1.000        ; -0.062     ; 1.590      ;
+; -0.651 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.584      ;
+; -0.645 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.578      ;
+; -0.628 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[6]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.561      ;
+; -0.626 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.559      ;
+; -0.619 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.552      ;
+; -0.617 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.550      ;
+; -0.602 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.535      ;
+; -0.591 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.524      ;
+; -0.585 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.518      ;
+; -0.583 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.516      ;
+; -0.579 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.512      ;
+; -0.577 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.510      ;
+; -0.572 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.505      ;
+; -0.571 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.504      ;
+; -0.569 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.502      ;
+; -0.564 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.497      ;
+; -0.563 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.496      ;
+; -0.562 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.495      ;
+; -0.562 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[7]  ; clk          ; clk         ; 1.000        ; -0.062     ; 1.495      ;
+; -0.562 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.495      ;
+; -0.562 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[6]  ; clk          ; clk         ; 1.000        ; -0.062     ; 1.495      ;
+; -0.562 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[5]  ; clk          ; clk         ; 1.000        ; -0.062     ; 1.495      ;
+; -0.562 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.495      ;
+; -0.562 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.495      ;
+; -0.562 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; clk          ; clk         ; 1.000        ; -0.062     ; 1.495      ;
+; -0.561 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.494      ;
+; -0.558 ; fibo_dp:f1|count_dec:dp5|temp[0]            ; fibo_fsm:f2|current_state.s5                ; clk          ; clk         ; 1.000        ; -0.061     ; 1.492      ;
+; -0.558 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.491      ;
+; -0.538 ; fibo_dp:f1|count_dec:dp5|temp[1]            ; fibo_fsm:f2|current_state.s5                ; clk          ; clk         ; 1.000        ; -0.061     ; 1.472      ;
+; -0.507 ; fibo_dp:f1|count_dec:dp5|temp[3]            ; fibo_dp:f1|count_dec:dp5|temp[3]            ; clk          ; clk         ; 1.000        ; -0.062     ; 1.440      ;
+; -0.503 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.436      ;
+; -0.495 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.428      ;
+; -0.486 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.419      ;
+; -0.467 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[1] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.400      ;
+; -0.456 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.062     ; 1.389      ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                                                                       ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.358 ; fibo_fsm:f2|current_state.s4                ; fibo_fsm:f2|current_state.s4                ; clk          ; clk         ; 0.000        ; 0.062      ; 0.577      ;
+; 0.358 ; fibo_dp:f1|count_dec:dp5|temp[1]            ; fibo_dp:f1|count_dec:dp5|temp[1]            ; clk          ; clk         ; 0.000        ; 0.062      ; 0.577      ;
+; 0.361 ; fibo_dp:f1|count_dec:dp5|temp[0]            ; fibo_dp:f1|count_dec:dp5|temp[0]            ; clk          ; clk         ; 0.000        ; 0.062      ; 0.580      ;
+; 0.374 ; fibo_fsm:f2|current_state.s2                ; fibo_fsm:f2|current_state.s1                ; clk          ; clk         ; 0.000        ; 0.062      ; 0.593      ;
+; 0.380 ; fibo_fsm:f2|current_state.s1                ; fibo_fsm:f2|current_state.s2                ; clk          ; clk         ; 0.000        ; 0.062      ; 0.599      ;
+; 0.382 ; fibo_fsm:f2|current_state.s7                ; fibo_fsm:f2|current_state.s8                ; clk          ; clk         ; 0.000        ; 0.062      ; 0.601      ;
+; 0.383 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; clk          ; clk         ; 0.000        ; 0.062      ; 0.602      ;
+; 0.393 ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.612      ;
+; 0.393 ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.612      ;
+; 0.394 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[6] ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[6]  ; clk          ; clk         ; 0.000        ; 0.062      ; 0.613      ;
+; 0.394 ; fibo_fsm:f2|current_state.s5                ; fibo_fsm:f2|current_state.s6                ; clk          ; clk         ; 0.000        ; 0.062      ; 0.613      ;
+; 0.473 ; fibo_fsm:f2|current_state.s0                ; fibo_fsm:f2|current_state.s1                ; clk          ; clk         ; 0.000        ; 0.062      ; 0.692      ;
+; 0.488 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; clk          ; clk         ; 0.000        ; 0.062      ; 0.707      ;
+; 0.498 ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.717      ;
+; 0.499 ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.718      ;
+; 0.500 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; clk          ; clk         ; 0.000        ; 0.062      ; 0.719      ;
+; 0.510 ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.729      ;
+; 0.530 ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.749      ;
+; 0.531 ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.750      ;
+; 0.535 ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[7] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.754      ;
+; 0.549 ; fibo_fsm:f2|current_state.s6                ; fibo_fsm:f2|current_state.s7                ; clk          ; clk         ; 0.000        ; 0.061      ; 0.767      ;
+; 0.551 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[7] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.770      ;
+; 0.552 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[1] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.771      ;
+; 0.556 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.775      ;
+; 0.560 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.779      ;
+; 0.561 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[1] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.780      ;
+; 0.566 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[0] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.785      ;
+; 0.566 ; fibo_fsm:f2|current_state.s8                ; fibo_fsm:f2|current_state.s4                ; clk          ; clk         ; 0.000        ; 0.062      ; 0.785      ;
+; 0.572 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[7] ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[7]  ; clk          ; clk         ; 0.000        ; 0.062      ; 0.791      ;
+; 0.572 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.791      ;
+; 0.582 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[0] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.801      ;
+; 0.597 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|count_dec:dp5|temp[3]            ; clk          ; clk         ; 0.000        ; 0.061      ; 0.815      ;
+; 0.603 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|count_dec:dp5|temp[1]            ; clk          ; clk         ; 0.000        ; 0.061      ; 0.821      ;
+; 0.603 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|count_dec:dp5|temp[0]            ; clk          ; clk         ; 0.000        ; 0.061      ; 0.821      ;
+; 0.611 ; fibo_dp:f1|count_dec:dp5|temp[0]            ; fibo_dp:f1|count_dec:dp5|temp[1]            ; clk          ; clk         ; 0.000        ; 0.062      ; 0.830      ;
+; 0.611 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; clk          ; clk         ; 0.000        ; 0.062      ; 0.830      ;
+; 0.613 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[7]  ; clk          ; clk         ; 0.000        ; 0.062      ; 0.832      ;
+; 0.615 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[5]  ; clk          ; clk         ; 0.000        ; 0.062      ; 0.834      ;
+; 0.650 ; fibo_fsm:f2|current_state.s4                ; fibo_fsm:f2|current_state.s5                ; clk          ; clk         ; 0.000        ; 0.063      ; 0.870      ;
+; 0.665 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; clk          ; clk         ; 0.000        ; 0.062      ; 0.884      ;
+; 0.689 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[7]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.908      ;
+; 0.690 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.909      ;
+; 0.694 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[5]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.913      ;
+; 0.701 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.920      ;
+; 0.705 ; fibo_dp:f1|count_dec:dp5|temp[2]            ; fibo_fsm:f2|current_state.s4                ; clk          ; clk         ; 0.000        ; 0.062      ; 0.924      ;
+; 0.706 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; clk          ; clk         ; 0.000        ; 0.062      ; 0.925      ;
+; 0.723 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.942      ;
+; 0.725 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[6]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.944      ;
+; 0.738 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[5]  ; clk          ; clk         ; 0.000        ; 0.062      ; 0.957      ;
+; 0.739 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.958      ;
+; 0.744 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; clk          ; clk         ; 0.000        ; 0.062      ; 0.963      ;
+; 0.745 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.964      ;
+; 0.746 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; clk          ; clk         ; 0.000        ; 0.062      ; 0.965      ;
+; 0.748 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 0.000        ; 0.062      ; 0.967      ;
+; 0.787 ; fibo_dp:f1|count_dec:dp5|temp[1]            ; fibo_dp:f1|count_dec:dp5|temp[2]            ; clk          ; clk         ; 0.000        ; 0.062      ; 1.006      ;
+; 0.791 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.010      ;
+; 0.793 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[6]  ; clk          ; clk         ; 0.000        ; 0.062      ; 1.012      ;
+; 0.793 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.012      ;
+; 0.795 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[7] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.014      ;
+; 0.796 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.015      ;
+; 0.800 ; fibo_dp:f1|count_dec:dp5|temp[3]            ; fibo_fsm:f2|current_state.s4                ; clk          ; clk         ; 0.000        ; 0.062      ; 1.019      ;
+; 0.826 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.045      ;
+; 0.828 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.047      ;
+; 0.828 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.047      ;
+; 0.829 ; fibo_fsm:f2|current_state.s1                ; fibo_fsm:f2|current_state.s3                ; clk          ; clk         ; 0.000        ; 0.063      ; 1.049      ;
+; 0.829 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.048      ;
+; 0.829 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; clk          ; clk         ; 0.000        ; 0.062      ; 1.048      ;
+; 0.832 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; clk          ; clk         ; 0.000        ; 0.062      ; 1.051      ;
+; 0.832 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|count_dec:dp5|temp[2]            ; clk          ; clk         ; 0.000        ; 0.061      ; 1.050      ;
+; 0.833 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.052      ;
+; 0.840 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[1] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.059      ;
+; 0.842 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.061      ;
+; 0.846 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.065      ;
+; 0.849 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.068      ;
+; 0.851 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.070      ;
+; 0.860 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[1] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.079      ;
+; 0.862 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.081      ;
+; 0.866 ; fibo_dp:f1|count_dec:dp5|temp[2]            ; fibo_fsm:f2|current_state.s5                ; clk          ; clk         ; 0.000        ; 0.063      ; 1.086      ;
+; 0.897 ; fibo_dp:f1|count_dec:dp5|temp[2]            ; fibo_dp:f1|count_dec:dp5|temp[2]            ; clk          ; clk         ; 0.000        ; 0.062      ; 1.116      ;
+; 0.916 ; fibo_dp:f1|count_dec:dp5|temp[2]            ; fibo_dp:f1|count_dec:dp5|temp[3]            ; clk          ; clk         ; 0.000        ; 0.062      ; 1.135      ;
+; 0.918 ; fibo_dp:f1|count_dec:dp5|temp[0]            ; fibo_dp:f1|count_dec:dp5|temp[2]            ; clk          ; clk         ; 0.000        ; 0.062      ; 1.137      ;
+; 0.921 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[6] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.140      ;
+; 0.936 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.155      ;
+; 0.938 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.157      ;
+; 0.938 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.157      ;
+; 0.940 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.159      ;
+; 0.943 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.162      ;
+; 0.945 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.164      ;
+; 0.952 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.171      ;
+; 0.954 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.173      ;
+; 0.956 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.175      ;
+; 0.961 ; fibo_dp:f1|count_dec:dp5|temp[3]            ; fibo_fsm:f2|current_state.s5                ; clk          ; clk         ; 0.000        ; 0.063      ; 1.181      ;
+; 0.961 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.180      ;
+; 0.966 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[5]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.185      ;
+; 0.972 ; fibo_fsm:f2|current_state.s3                ; fibo_fsm:f2|current_state.s4                ; clk          ; clk         ; 0.000        ; 0.061      ; 1.190      ;
+; 0.972 ; fibo_dp:f1|count_dec:dp5|temp[1]            ; fibo_fsm:f2|current_state.s4                ; clk          ; clk         ; 0.000        ; 0.062      ; 1.191      ;
+; 0.972 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.191      ;
+; 0.974 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.193      ;
+; 0.975 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.062      ; 1.194      ;
+; 0.979 ; fibo_dp:f1|count_dec:dp5|temp[0]            ; fibo_fsm:f2|current_state.s4                ; clk          ; clk         ; 0.000        ; 0.062      ; 1.198      ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                         ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 592.77 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -0.687 ; -16.625           ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.312 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -40.000                         ;
++-------+--------+---------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                                                                        ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.687 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.627      ;
+; -0.668 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.608      ;
+; -0.668 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.608      ;
+; -0.668 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; clk          ; clk         ; 1.000        ; -0.055     ; 1.608      ;
+; -0.668 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; clk          ; clk         ; 1.000        ; -0.055     ; 1.608      ;
+; -0.668 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.608      ;
+; -0.668 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; clk          ; clk         ; 1.000        ; -0.055     ; 1.608      ;
+; -0.668 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.608      ;
+; -0.668 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; clk          ; clk         ; 1.000        ; -0.055     ; 1.608      ;
+; -0.662 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[6] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.602      ;
+; -0.662 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.602      ;
+; -0.619 ; fibo_fsm:f2|current_state.s7                ; fibo_dp:f1|count_dec:dp5|temp[3]            ; clk          ; clk         ; 1.000        ; -0.055     ; 1.559      ;
+; -0.619 ; fibo_fsm:f2|current_state.s7                ; fibo_dp:f1|count_dec:dp5|temp[2]            ; clk          ; clk         ; 1.000        ; -0.055     ; 1.559      ;
+; -0.619 ; fibo_fsm:f2|current_state.s7                ; fibo_dp:f1|count_dec:dp5|temp[1]            ; clk          ; clk         ; 1.000        ; -0.055     ; 1.559      ;
+; -0.619 ; fibo_fsm:f2|current_state.s7                ; fibo_dp:f1|count_dec:dp5|temp[0]            ; clk          ; clk         ; 1.000        ; -0.055     ; 1.559      ;
+; -0.616 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.556      ;
+; -0.608 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.548      ;
+; -0.599 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.539      ;
+; -0.598 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.538      ;
+; -0.589 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.529      ;
+; -0.588 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.528      ;
+; -0.587 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.527      ;
+; -0.587 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.527      ;
+; -0.581 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.521      ;
+; -0.571 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.511      ;
+; -0.570 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|count_dec:dp5|temp[3]            ; clk          ; clk         ; 1.000        ; -0.056     ; 1.509      ;
+; -0.570 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|count_dec:dp5|temp[2]            ; clk          ; clk         ; 1.000        ; -0.056     ; 1.509      ;
+; -0.570 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|count_dec:dp5|temp[1]            ; clk          ; clk         ; 1.000        ; -0.056     ; 1.509      ;
+; -0.570 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|count_dec:dp5|temp[0]            ; clk          ; clk         ; 1.000        ; -0.056     ; 1.509      ;
+; -0.562 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.502      ;
+; -0.558 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.498      ;
+; -0.541 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.481      ;
+; -0.541 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.481      ;
+; -0.541 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; clk          ; clk         ; 1.000        ; -0.055     ; 1.481      ;
+; -0.541 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; clk          ; clk         ; 1.000        ; -0.055     ; 1.481      ;
+; -0.541 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.481      ;
+; -0.541 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; clk          ; clk         ; 1.000        ; -0.055     ; 1.481      ;
+; -0.541 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.481      ;
+; -0.541 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; clk          ; clk         ; 1.000        ; -0.055     ; 1.481      ;
+; -0.538 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.478      ;
+; -0.536 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.476      ;
+; -0.536 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[7]  ; clk          ; clk         ; 1.000        ; -0.055     ; 1.476      ;
+; -0.536 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.476      ;
+; -0.536 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[6]  ; clk          ; clk         ; 1.000        ; -0.055     ; 1.476      ;
+; -0.536 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[5]  ; clk          ; clk         ; 1.000        ; -0.055     ; 1.476      ;
+; -0.536 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.476      ;
+; -0.536 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.476      ;
+; -0.536 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; clk          ; clk         ; 1.000        ; -0.055     ; 1.476      ;
+; -0.527 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.467      ;
+; -0.525 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.465      ;
+; -0.516 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.456      ;
+; -0.508 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[5]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.448      ;
+; -0.508 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.448      ;
+; -0.501 ; fibo_dp:f1|count_dec:dp5|temp[0]            ; fibo_dp:f1|count_dec:dp5|temp[3]            ; clk          ; clk         ; 1.000        ; -0.055     ; 1.441      ;
+; -0.499 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.439      ;
+; -0.498 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.438      ;
+; -0.493 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.433      ;
+; -0.490 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[5]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.430      ;
+; -0.489 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.429      ;
+; -0.488 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.428      ;
+; -0.487 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.427      ;
+; -0.487 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.427      ;
+; -0.481 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.421      ;
+; -0.478 ; fibo_dp:f1|count_dec:dp5|temp[1]            ; fibo_dp:f1|count_dec:dp5|temp[3]            ; clk          ; clk         ; 1.000        ; -0.055     ; 1.418      ;
+; -0.475 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.415      ;
+; -0.471 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.411      ;
+; -0.464 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[6]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.404      ;
+; -0.462 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.402      ;
+; -0.458 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.398      ;
+; -0.438 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.378      ;
+; -0.437 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.377      ;
+; -0.427 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.367      ;
+; -0.425 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.365      ;
+; -0.409 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.349      ;
+; -0.409 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[7]  ; clk          ; clk         ; 1.000        ; -0.055     ; 1.349      ;
+; -0.409 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.349      ;
+; -0.409 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[6]  ; clk          ; clk         ; 1.000        ; -0.055     ; 1.349      ;
+; -0.409 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[5]  ; clk          ; clk         ; 1.000        ; -0.055     ; 1.349      ;
+; -0.409 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.349      ;
+; -0.409 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.349      ;
+; -0.409 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; clk          ; clk         ; 1.000        ; -0.055     ; 1.349      ;
+; -0.408 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.348      ;
+; -0.407 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.347      ;
+; -0.403 ; fibo_dp:f1|count_dec:dp5|temp[0]            ; fibo_fsm:f2|current_state.s5                ; clk          ; clk         ; 1.000        ; -0.054     ; 1.344      ;
+; -0.399 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.339      ;
+; -0.398 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.338      ;
+; -0.393 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.333      ;
+; -0.389 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.329      ;
+; -0.389 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.329      ;
+; -0.388 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.328      ;
+; -0.382 ; fibo_dp:f1|count_dec:dp5|temp[1]            ; fibo_fsm:f2|current_state.s5                ; clk          ; clk         ; 1.000        ; -0.054     ; 1.323      ;
+; -0.381 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.321      ;
+; -0.375 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.315      ;
+; -0.371 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.311      ;
+; -0.350 ; fibo_dp:f1|count_dec:dp5|temp[3]            ; fibo_dp:f1|count_dec:dp5|temp[3]            ; clk          ; clk         ; 1.000        ; -0.055     ; 1.290      ;
+; -0.338 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.278      ;
+; -0.331 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.271      ;
+; -0.325 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.265      ;
+; -0.308 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[1] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.248      ;
+; -0.298 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.055     ; 1.238      ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                                                                        ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.312 ; fibo_fsm:f2|current_state.s4                ; fibo_fsm:f2|current_state.s4                ; clk          ; clk         ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; fibo_dp:f1|count_dec:dp5|temp[1]            ; fibo_dp:f1|count_dec:dp5|temp[1]            ; clk          ; clk         ; 0.000        ; 0.055      ; 0.511      ;
+; 0.320 ; fibo_dp:f1|count_dec:dp5|temp[0]            ; fibo_dp:f1|count_dec:dp5|temp[0]            ; clk          ; clk         ; 0.000        ; 0.055      ; 0.519      ;
+; 0.339 ; fibo_fsm:f2|current_state.s2                ; fibo_fsm:f2|current_state.s1                ; clk          ; clk         ; 0.000        ; 0.055      ; 0.538      ;
+; 0.345 ; fibo_fsm:f2|current_state.s7                ; fibo_fsm:f2|current_state.s8                ; clk          ; clk         ; 0.000        ; 0.055      ; 0.544      ;
+; 0.345 ; fibo_fsm:f2|current_state.s1                ; fibo_fsm:f2|current_state.s2                ; clk          ; clk         ; 0.000        ; 0.055      ; 0.544      ;
+; 0.347 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; clk          ; clk         ; 0.000        ; 0.055      ; 0.546      ;
+; 0.356 ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.555      ;
+; 0.357 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[6] ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[6]  ; clk          ; clk         ; 0.000        ; 0.055      ; 0.556      ;
+; 0.357 ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.556      ;
+; 0.357 ; fibo_fsm:f2|current_state.s5                ; fibo_fsm:f2|current_state.s6                ; clk          ; clk         ; 0.000        ; 0.055      ; 0.556      ;
+; 0.421 ; fibo_fsm:f2|current_state.s0                ; fibo_fsm:f2|current_state.s1                ; clk          ; clk         ; 0.000        ; 0.055      ; 0.620      ;
+; 0.439 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; clk          ; clk         ; 0.000        ; 0.055      ; 0.638      ;
+; 0.449 ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.648      ;
+; 0.450 ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.649      ;
+; 0.451 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; clk          ; clk         ; 0.000        ; 0.055      ; 0.650      ;
+; 0.470 ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.669      ;
+; 0.485 ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.684      ;
+; 0.486 ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.685      ;
+; 0.490 ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[7] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.689      ;
+; 0.497 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[1] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.696      ;
+; 0.500 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.699      ;
+; 0.502 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[7] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.701      ;
+; 0.504 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.703      ;
+; 0.504 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[1] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.703      ;
+; 0.509 ; fibo_fsm:f2|current_state.s6                ; fibo_fsm:f2|current_state.s7                ; clk          ; clk         ; 0.000        ; 0.054      ; 0.707      ;
+; 0.510 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[0] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.709      ;
+; 0.511 ; fibo_fsm:f2|current_state.s8                ; fibo_fsm:f2|current_state.s4                ; clk          ; clk         ; 0.000        ; 0.055      ; 0.710      ;
+; 0.513 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[7] ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[7]  ; clk          ; clk         ; 0.000        ; 0.055      ; 0.712      ;
+; 0.514 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.713      ;
+; 0.525 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[0] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.724      ;
+; 0.544 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|count_dec:dp5|temp[3]            ; clk          ; clk         ; 0.000        ; 0.054      ; 0.742      ;
+; 0.548 ; fibo_dp:f1|count_dec:dp5|temp[0]            ; fibo_dp:f1|count_dec:dp5|temp[1]            ; clk          ; clk         ; 0.000        ; 0.055      ; 0.747      ;
+; 0.549 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|count_dec:dp5|temp[1]            ; clk          ; clk         ; 0.000        ; 0.054      ; 0.747      ;
+; 0.549 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|count_dec:dp5|temp[0]            ; clk          ; clk         ; 0.000        ; 0.054      ; 0.747      ;
+; 0.561 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; clk          ; clk         ; 0.000        ; 0.055      ; 0.760      ;
+; 0.564 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[7]  ; clk          ; clk         ; 0.000        ; 0.055      ; 0.763      ;
+; 0.566 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[5]  ; clk          ; clk         ; 0.000        ; 0.055      ; 0.765      ;
+; 0.598 ; fibo_fsm:f2|current_state.s4                ; fibo_fsm:f2|current_state.s5                ; clk          ; clk         ; 0.000        ; 0.056      ; 0.798      ;
+; 0.607 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; clk          ; clk         ; 0.000        ; 0.055      ; 0.806      ;
+; 0.628 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.827      ;
+; 0.629 ; fibo_dp:f1|count_dec:dp5|temp[2]            ; fibo_fsm:f2|current_state.s4                ; clk          ; clk         ; 0.000        ; 0.055      ; 0.828      ;
+; 0.629 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[7]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.828      ;
+; 0.634 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[5]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.833      ;
+; 0.639 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.838      ;
+; 0.644 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; clk          ; clk         ; 0.000        ; 0.055      ; 0.843      ;
+; 0.662 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.861      ;
+; 0.663 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[6]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.862      ;
+; 0.665 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.864      ;
+; 0.674 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[5]  ; clk          ; clk         ; 0.000        ; 0.055      ; 0.873      ;
+; 0.677 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; clk          ; clk         ; 0.000        ; 0.055      ; 0.876      ;
+; 0.677 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.876      ;
+; 0.678 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; clk          ; clk         ; 0.000        ; 0.055      ; 0.877      ;
+; 0.686 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.885      ;
+; 0.699 ; fibo_dp:f1|count_dec:dp5|temp[1]            ; fibo_dp:f1|count_dec:dp5|temp[2]            ; clk          ; clk         ; 0.000        ; 0.055      ; 0.898      ;
+; 0.713 ; fibo_dp:f1|count_dec:dp5|temp[3]            ; fibo_fsm:f2|current_state.s4                ; clk          ; clk         ; 0.000        ; 0.055      ; 0.912      ;
+; 0.718 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.917      ;
+; 0.721 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[6]  ; clk          ; clk         ; 0.000        ; 0.055      ; 0.920      ;
+; 0.722 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.921      ;
+; 0.723 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[7] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.922      ;
+; 0.724 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.923      ;
+; 0.740 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.939      ;
+; 0.743 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.942      ;
+; 0.745 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[1] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.944      ;
+; 0.747 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.946      ;
+; 0.749 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.948      ;
+; 0.749 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.948      ;
+; 0.750 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; clk          ; clk         ; 0.000        ; 0.055      ; 0.949      ;
+; 0.752 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; clk          ; clk         ; 0.000        ; 0.055      ; 0.951      ;
+; 0.752 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.951      ;
+; 0.755 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.954      ;
+; 0.757 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.956      ;
+; 0.761 ; fibo_fsm:f2|current_state.s1                ; fibo_fsm:f2|current_state.s3                ; clk          ; clk         ; 0.000        ; 0.056      ; 0.961      ;
+; 0.761 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|count_dec:dp5|temp[2]            ; clk          ; clk         ; 0.000        ; 0.054      ; 0.959      ;
+; 0.762 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.961      ;
+; 0.764 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[1] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.963      ;
+; 0.770 ; fibo_dp:f1|count_dec:dp5|temp[2]            ; fibo_fsm:f2|current_state.s5                ; clk          ; clk         ; 0.000        ; 0.056      ; 0.970      ;
+; 0.771 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 0.000        ; 0.055      ; 0.970      ;
+; 0.812 ; fibo_dp:f1|count_dec:dp5|temp[2]            ; fibo_dp:f1|count_dec:dp5|temp[2]            ; clk          ; clk         ; 0.000        ; 0.055      ; 1.011      ;
+; 0.826 ; fibo_dp:f1|count_dec:dp5|temp[2]            ; fibo_dp:f1|count_dec:dp5|temp[3]            ; clk          ; clk         ; 0.000        ; 0.055      ; 1.025      ;
+; 0.829 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.028      ;
+; 0.829 ; fibo_dp:f1|count_dec:dp5|temp[0]            ; fibo_dp:f1|count_dec:dp5|temp[2]            ; clk          ; clk         ; 0.000        ; 0.055      ; 1.028      ;
+; 0.832 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.031      ;
+; 0.836 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.035      ;
+; 0.836 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.035      ;
+; 0.839 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.038      ;
+; 0.841 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.040      ;
+; 0.843 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.042      ;
+; 0.846 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.045      ;
+; 0.848 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.047      ;
+; 0.851 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.050      ;
+; 0.854 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[6] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.053      ;
+; 0.854 ; fibo_dp:f1|count_dec:dp5|temp[3]            ; fibo_fsm:f2|current_state.s5                ; clk          ; clk         ; 0.000        ; 0.056      ; 1.054      ;
+; 0.860 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.059      ;
+; 0.867 ; fibo_dp:f1|count_dec:dp5|temp[1]            ; fibo_fsm:f2|current_state.s4                ; clk          ; clk         ; 0.000        ; 0.055      ; 1.066      ;
+; 0.867 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.066      ;
+; 0.876 ; fibo_dp:f1|count_dec:dp5|temp[0]            ; fibo_fsm:f2|current_state.s4                ; clk          ; clk         ; 0.000        ; 0.055      ; 1.075      ;
+; 0.877 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[5]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.076      ;
+; 0.878 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.077      ;
+; 0.882 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.081      ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -0.035 ; -0.340            ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.187 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -42.019                         ;
++-------+--------+---------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                                                                        ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.035 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.986      ;
+; -0.034 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.985      ;
+; -0.034 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.985      ;
+; -0.034 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; clk          ; clk         ; 1.000        ; -0.036     ; 0.985      ;
+; -0.034 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; clk          ; clk         ; 1.000        ; -0.036     ; 0.985      ;
+; -0.034 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.985      ;
+; -0.034 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; clk          ; clk         ; 1.000        ; -0.036     ; 0.985      ;
+; -0.034 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.985      ;
+; -0.034 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; clk          ; clk         ; 1.000        ; -0.036     ; 0.985      ;
+; -0.033 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.984      ;
+; -0.029 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.980      ;
+; -0.021 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.971      ;
+; -0.018 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.969      ;
+; -0.017 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.967      ;
+; -0.015 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.965      ;
+; -0.012 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.962      ;
+; -0.011 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.961      ;
+; -0.004 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.955      ;
+; -0.002 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.952      ;
+; -0.001 ; fibo_fsm:f2|current_state.s7                ; fibo_dp:f1|count_dec:dp5|temp[3]            ; clk          ; clk         ; 1.000        ; -0.036     ; 0.952      ;
+; -0.001 ; fibo_fsm:f2|current_state.s7                ; fibo_dp:f1|count_dec:dp5|temp[2]            ; clk          ; clk         ; 1.000        ; -0.036     ; 0.952      ;
+; -0.001 ; fibo_fsm:f2|current_state.s7                ; fibo_dp:f1|count_dec:dp5|temp[1]            ; clk          ; clk         ; 1.000        ; -0.036     ; 0.952      ;
+; -0.001 ; fibo_fsm:f2|current_state.s7                ; fibo_dp:f1|count_dec:dp5|temp[0]            ; clk          ; clk         ; 1.000        ; -0.036     ; 0.952      ;
+; 0.008  ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[6] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.943      ;
+; 0.010  ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.941      ;
+; 0.026  ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.924      ;
+; 0.029  ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|count_dec:dp5|temp[3]            ; clk          ; clk         ; 1.000        ; -0.036     ; 0.922      ;
+; 0.029  ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|count_dec:dp5|temp[2]            ; clk          ; clk         ; 1.000        ; -0.036     ; 0.922      ;
+; 0.029  ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|count_dec:dp5|temp[1]            ; clk          ; clk         ; 1.000        ; -0.036     ; 0.922      ;
+; 0.029  ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|count_dec:dp5|temp[0]            ; clk          ; clk         ; 1.000        ; -0.036     ; 0.922      ;
+; 0.033  ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.918      ;
+; 0.035  ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.916      ;
+; 0.036  ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.914      ;
+; 0.039  ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.912      ;
+; 0.039  ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[5]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.912      ;
+; 0.041  ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.910      ;
+; 0.041  ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.910      ;
+; 0.041  ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; clk          ; clk         ; 1.000        ; -0.036     ; 0.910      ;
+; 0.041  ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; clk          ; clk         ; 1.000        ; -0.036     ; 0.910      ;
+; 0.041  ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.910      ;
+; 0.041  ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; clk          ; clk         ; 1.000        ; -0.036     ; 0.910      ;
+; 0.041  ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.910      ;
+; 0.041  ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; clk          ; clk         ; 1.000        ; -0.036     ; 0.910      ;
+; 0.043  ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[5]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.908      ;
+; 0.047  ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.903      ;
+; 0.050  ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.901      ;
+; 0.051  ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.899      ;
+; 0.051  ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.899      ;
+; 0.053  ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.897      ;
+; 0.055  ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.895      ;
+; 0.056  ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.894      ;
+; 0.057  ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.893      ;
+; 0.058  ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.893      ;
+; 0.058  ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[7]  ; clk          ; clk         ; 1.000        ; -0.036     ; 0.893      ;
+; 0.058  ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.893      ;
+; 0.058  ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[6]  ; clk          ; clk         ; 1.000        ; -0.036     ; 0.893      ;
+; 0.058  ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[5]  ; clk          ; clk         ; 1.000        ; -0.036     ; 0.893      ;
+; 0.058  ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.893      ;
+; 0.058  ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.893      ;
+; 0.058  ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; clk          ; clk         ; 1.000        ; -0.036     ; 0.893      ;
+; 0.059  ; fibo_dp:f1|count_dec:dp5|temp[0]            ; fibo_dp:f1|count_dec:dp5|temp[3]            ; clk          ; clk         ; 1.000        ; -0.036     ; 0.892      ;
+; 0.064  ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.886      ;
+; 0.064  ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.887      ;
+; 0.066  ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.884      ;
+; 0.072  ; fibo_dp:f1|count_dec:dp5|temp[1]            ; fibo_dp:f1|count_dec:dp5|temp[3]            ; clk          ; clk         ; 1.000        ; -0.036     ; 0.879      ;
+; 0.078  ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.873      ;
+; 0.094  ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.856      ;
+; 0.096  ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.854      ;
+; 0.101  ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.850      ;
+; 0.104  ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.846      ;
+; 0.112  ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.838      ;
+; 0.115  ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.835      ;
+; 0.116  ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.834      ;
+; 0.117  ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[6]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.834      ;
+; 0.118  ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.833      ;
+; 0.119  ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.831      ;
+; 0.119  ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.831      ;
+; 0.121  ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.829      ;
+; 0.123  ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.827      ;
+; 0.124  ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.826      ;
+; 0.125  ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.825      ;
+; 0.130  ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.820      ;
+; 0.132  ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.818      ;
+; 0.133  ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[7] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.818      ;
+; 0.133  ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[7]  ; clk          ; clk         ; 1.000        ; -0.036     ; 0.818      ;
+; 0.133  ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.818      ;
+; 0.133  ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[6]  ; clk          ; clk         ; 1.000        ; -0.036     ; 0.818      ;
+; 0.133  ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[5]  ; clk          ; clk         ; 1.000        ; -0.036     ; 0.818      ;
+; 0.133  ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.818      ;
+; 0.133  ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; clk          ; clk         ; 1.000        ; -0.036     ; 0.818      ;
+; 0.133  ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; clk          ; clk         ; 1.000        ; -0.036     ; 0.818      ;
+; 0.134  ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.816      ;
+; 0.139  ; fibo_dp:f1|count_dec:dp5|temp[0]            ; fibo_fsm:f2|current_state.s5                ; clk          ; clk         ; 1.000        ; -0.036     ; 0.812      ;
+; 0.153  ; fibo_dp:f1|count_dec:dp5|temp[1]            ; fibo_fsm:f2|current_state.s5                ; clk          ; clk         ; 1.000        ; -0.036     ; 0.798      ;
+; 0.156  ; fibo_dp:f1|count_dec:dp5|temp[3]            ; fibo_dp:f1|count_dec:dp5|temp[3]            ; clk          ; clk         ; 1.000        ; -0.036     ; 0.795      ;
+; 0.162  ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.788      ;
+; 0.166  ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.784      ;
+; 0.172  ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.778      ;
+; 0.185  ; fibo_fsm:f2|current_state.s3                ; fibo_fsm:f2|current_state.s4                ; clk          ; clk         ; 1.000        ; -0.036     ; 0.766      ;
+; 0.192  ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[1] ; clk          ; clk         ; 1.000        ; -0.037     ; 0.758      ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                                                                        ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.187 ; fibo_fsm:f2|current_state.s4                ; fibo_fsm:f2|current_state.s4                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; fibo_dp:f1|count_dec:dp5|temp[1]            ; fibo_dp:f1|count_dec:dp5|temp[1]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.194 ; fibo_dp:f1|count_dec:dp5|temp[0]            ; fibo_dp:f1|count_dec:dp5|temp[0]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.314      ;
+; 0.194 ; fibo_fsm:f2|current_state.s2                ; fibo_fsm:f2|current_state.s1                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.314      ;
+; 0.197 ; fibo_fsm:f2|current_state.s1                ; fibo_fsm:f2|current_state.s2                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.317      ;
+; 0.198 ; fibo_fsm:f2|current_state.s7                ; fibo_fsm:f2|current_state.s8                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.318      ;
+; 0.200 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.321      ;
+; 0.204 ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.325      ;
+; 0.205 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[6] ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[6]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.325      ;
+; 0.205 ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.326      ;
+; 0.205 ; fibo_fsm:f2|current_state.s5                ; fibo_fsm:f2|current_state.s6                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.325      ;
+; 0.252 ; fibo_fsm:f2|current_state.s0                ; fibo_fsm:f2|current_state.s1                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.372      ;
+; 0.259 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.380      ;
+; 0.263 ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.383      ;
+; 0.263 ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.384      ;
+; 0.264 ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.385      ;
+; 0.266 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.386      ;
+; 0.271 ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.391      ;
+; 0.273 ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.393      ;
+; 0.274 ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[7] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.394      ;
+; 0.283 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[7] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.404      ;
+; 0.284 ; fibo_fsm:f2|current_state.s6                ; fibo_fsm:f2|current_state.s7                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.404      ;
+; 0.296 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[1] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.417      ;
+; 0.297 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.418      ;
+; 0.299 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.420      ;
+; 0.299 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[1] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.420      ;
+; 0.301 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[0] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.422      ;
+; 0.303 ; fibo_fsm:f2|current_state.s8                ; fibo_fsm:f2|current_state.s4                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.423      ;
+; 0.306 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[7] ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[7]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.427      ;
+; 0.311 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[0] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.432      ;
+; 0.313 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|count_dec:dp5|temp[3]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.433      ;
+; 0.317 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|count_dec:dp5|temp[1]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.437      ;
+; 0.317 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|count_dec:dp5|temp[0]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.437      ;
+; 0.323 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.443      ;
+; 0.324 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[5]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.444      ;
+; 0.324 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[7]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.444      ;
+; 0.330 ; fibo_dp:f1|count_dec:dp5|temp[0]            ; fibo_dp:f1|count_dec:dp5|temp[1]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.450      ;
+; 0.336 ; fibo_fsm:f2|current_state.s4                ; fibo_fsm:f2|current_state.s5                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.456      ;
+; 0.345 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.466      ;
+; 0.362 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.483      ;
+; 0.363 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[7]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.484      ;
+; 0.365 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[5]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.486      ;
+; 0.369 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.490      ;
+; 0.373 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.494      ;
+; 0.377 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[2]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.498      ;
+; 0.378 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[6]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.499      ;
+; 0.385 ; fibo_dp:f1|count_dec:dp5|temp[2]            ; fibo_fsm:f2|current_state.s4                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.505      ;
+; 0.387 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[5]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.507      ;
+; 0.393 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.514      ;
+; 0.393 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.514      ;
+; 0.396 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.517      ;
+; 0.397 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.518      ;
+; 0.397 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.518      ;
+; 0.417 ; fibo_dp:f1|count_dec:dp5|temp[1]            ; fibo_dp:f1|count_dec:dp5|temp[2]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.537      ;
+; 0.423 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.543      ;
+; 0.424 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[6]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.544      ;
+; 0.424 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.544      ;
+; 0.425 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[7] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.545      ;
+; 0.426 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[2] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.546      ;
+; 0.428 ; fibo_fsm:f2|current_state.s1                ; fibo_fsm:f2|current_state.s3                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.548      ;
+; 0.436 ; fibo_dp:f1|count_dec:dp5|temp[3]            ; fibo_fsm:f2|current_state.s4                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.556      ;
+; 0.443 ; fibo_fsm:f2|current_state.s3                ; fibo_dp:f1|count_dec:dp5|temp[2]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.563      ;
+; 0.444 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.565      ;
+; 0.444 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.565      ;
+; 0.444 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.565      ;
+; 0.445 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.566      ;
+; 0.446 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.567      ;
+; 0.446 ; fibo_fsm:f2|current_state.s6                ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.567      ;
+; 0.447 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.568      ;
+; 0.453 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[1] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.574      ;
+; 0.454 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.575      ;
+; 0.456 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.577      ;
+; 0.458 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.579      ;
+; 0.461 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.582      ;
+; 0.464 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[1] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.585      ;
+; 0.467 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[2] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.588      ;
+; 0.476 ; fibo_dp:f1|count_dec:dp5|temp[2]            ; fibo_fsm:f2|current_state.s5                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.596      ;
+; 0.476 ; fibo_dp:f1|count_dec:dp5|temp[2]            ; fibo_dp:f1|count_dec:dp5|temp[2]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.596      ;
+; 0.482 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[6] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.603      ;
+; 0.488 ; fibo_dp:f1|count_dec:dp5|temp[2]            ; fibo_dp:f1|count_dec:dp5|temp[3]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.608      ;
+; 0.494 ; fibo_dp:f1|count_dec:dp5|temp[0]            ; fibo_dp:f1|count_dec:dp5|temp[2]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.614      ;
+; 0.507 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.628      ;
+; 0.508 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.629      ;
+; 0.510 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[1]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.631      ;
+; 0.510 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.631      ;
+; 0.511 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[3]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.632      ;
+; 0.513 ; fibo_fsm:f2|current_state.s3                ; fibo_fsm:f2|current_state.s4                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.633      ;
+; 0.513 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[5]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.634      ;
+; 0.513 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[1] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.634      ;
+; 0.517 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[5] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.638      ;
+; 0.517 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[3] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.638      ;
+; 0.519 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.640      ;
+; 0.521 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[5] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.642      ;
+; 0.522 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[0]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[4] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.643      ;
+; 0.524 ; fibo_dp:f1|reg_par_8bit_load:dp|reg_out[4]  ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[6] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.645      ;
+; 0.524 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[4] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[7] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.645      ;
+; 0.527 ; fibo_dp:f1|count_dec:dp5|temp[1]            ; fibo_fsm:f2|current_state.s4                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.647      ;
+; 0.527 ; fibo_dp:f1|count_dec:dp5|temp[3]            ; fibo_fsm:f2|current_state.s5                ; clk          ; clk         ; 0.000        ; 0.036      ; 0.647      ;
+; 0.530 ; fibo_dp:f1|reg_par_8bit_load:dp1|reg_out[0] ; fibo_dp:f1|reg_par_8bit_load:dp2|reg_out[3] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.651      ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -0.883  ; 0.187 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -0.883  ; 0.187 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -22.017 ; 0.0   ; 0.0      ; 0.0     ; -42.019             ;
+;  clk             ; -22.017 ; 0.000 ; N/A      ; N/A     ; -42.019             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; fib[0]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; fib[1]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; fib[2]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; fib[3]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; fib[4]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; fib[5]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; fib[6]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; fib[7]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; rst                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; go                      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i[3]                    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i[2]                    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i[0]                    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i[1]                    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; fib[0]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; fib[1]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; fib[2]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; fib[3]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; fib[4]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.44e-09 V                   ; 2.38 V              ; -0.0145 V           ; 0.169 V                              ; 0.026 V                              ; 4.83e-10 s                  ; 4.71e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.44e-09 V                  ; 2.38 V             ; -0.0145 V          ; 0.169 V                             ; 0.026 V                             ; 4.83e-10 s                 ; 4.71e-10 s                 ; Yes                       ; Yes                       ;
+; fib[5]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.44e-09 V                   ; 2.33 V              ; -0.00624 V          ; 0.185 V                              ; 0.097 V                              ; 2.82e-09 s                  ; 2.56e-09 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.44e-09 V                  ; 2.33 V             ; -0.00624 V         ; 0.185 V                             ; 0.097 V                             ; 2.82e-09 s                 ; 2.56e-09 s                 ; No                        ; Yes                       ;
+; fib[6]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.44e-09 V                   ; 2.39 V              ; -0.0265 V           ; 0.2 V                                ; 0.033 V                              ; 2.94e-10 s                  ; 3.12e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.44e-09 V                  ; 2.39 V             ; -0.0265 V          ; 0.2 V                               ; 0.033 V                             ; 2.94e-10 s                 ; 3.12e-10 s                 ; Yes                       ; Yes                       ;
+; fib[7]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.44e-09 V                   ; 2.33 V              ; -0.00624 V          ; 0.185 V                              ; 0.097 V                              ; 2.82e-09 s                  ; 2.56e-09 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.44e-09 V                  ; 2.33 V             ; -0.00624 V         ; 0.185 V                             ; 0.097 V                             ; 2.82e-09 s                 ; 2.56e-09 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.45e-09 V                   ; 2.38 V              ; -0.0609 V           ; 0.148 V                              ; 0.095 V                              ; 2.82e-10 s                  ; 2.59e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.45e-09 V                  ; 2.38 V             ; -0.0609 V          ; 0.148 V                             ; 0.095 V                             ; 2.82e-10 s                 ; 2.59e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.61e-09 V                   ; 2.38 V              ; -0.00274 V          ; 0.141 V                              ; 0.006 V                              ; 4.7e-10 s                   ; 6.02e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.61e-09 V                  ; 2.38 V             ; -0.00274 V         ; 0.141 V                             ; 0.006 V                             ; 4.7e-10 s                  ; 6.02e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; fib[0]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; fib[1]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; fib[2]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; fib[3]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; fib[4]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.16e-07 V                   ; 2.35 V              ; -0.00832 V          ; 0.101 V                              ; 0.024 V                              ; 6.39e-10 s                  ; 6e-10 s                     ; Yes                        ; Yes                        ; 2.32 V                      ; 7.16e-07 V                  ; 2.35 V             ; -0.00832 V         ; 0.101 V                             ; 0.024 V                             ; 6.39e-10 s                 ; 6e-10 s                    ; Yes                       ; Yes                       ;
+; fib[5]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.16e-07 V                   ; 2.33 V              ; -0.00349 V          ; 0.163 V                              ; 0.074 V                              ; 3.33e-09 s                  ; 3.14e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.16e-07 V                  ; 2.33 V             ; -0.00349 V         ; 0.163 V                             ; 0.074 V                             ; 3.33e-09 s                 ; 3.14e-09 s                 ; Yes                       ; Yes                       ;
+; fib[6]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.16e-07 V                   ; 2.36 V              ; -0.00476 V          ; 0.096 V                              ; 0.013 V                              ; 4.39e-10 s                  ; 4.15e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.16e-07 V                  ; 2.36 V             ; -0.00476 V         ; 0.096 V                             ; 0.013 V                             ; 4.39e-10 s                 ; 4.15e-10 s                 ; Yes                       ; Yes                       ;
+; fib[7]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.16e-07 V                   ; 2.33 V              ; -0.00349 V          ; 0.163 V                              ; 0.074 V                              ; 3.33e-09 s                  ; 3.14e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.16e-07 V                  ; 2.33 V             ; -0.00349 V         ; 0.163 V                             ; 0.074 V                             ; 3.33e-09 s                 ; 3.14e-09 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.74e-07 V                   ; 2.36 V              ; -0.0201 V           ; 0.072 V                              ; 0.033 V                              ; 4.04e-10 s                  ; 3.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.74e-07 V                  ; 2.36 V             ; -0.0201 V          ; 0.072 V                             ; 0.033 V                             ; 4.04e-10 s                 ; 3.29e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.45e-07 V                   ; 2.35 V              ; -0.00643 V          ; 0.081 V                              ; 0.031 V                              ; 5.31e-10 s                  ; 7.59e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.45e-07 V                  ; 2.35 V             ; -0.00643 V         ; 0.081 V                             ; 0.031 V                             ; 5.31e-10 s                 ; 7.59e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; fib[0]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; fib[1]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; fib[2]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; fib[3]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; fib[4]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; fib[5]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.64 V              ; -0.0117 V           ; 0.202 V                              ; 0.176 V                              ; 2.38e-09 s                  ; 2.22e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.64 V             ; -0.0117 V          ; 0.202 V                             ; 0.176 V                             ; 2.38e-09 s                 ; 2.22e-09 s                 ; No                        ; Yes                       ;
+; fib[6]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.73 V              ; -0.0384 V           ; 0.169 V                              ; 0.089 V                              ; 2.7e-10 s                   ; 2.62e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.73 V             ; -0.0384 V          ; 0.169 V                             ; 0.089 V                             ; 2.7e-10 s                  ; 2.62e-10 s                 ; Yes                       ; Yes                       ;
+; fib[7]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.64 V              ; -0.0117 V           ; 0.202 V                              ; 0.176 V                              ; 2.38e-09 s                  ; 2.22e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.64 V             ; -0.0117 V          ; 0.202 V                             ; 0.176 V                             ; 2.38e-09 s                 ; 2.22e-09 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 186      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 186      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 6     ; 6    ;
+; Unconstrained Input Port Paths  ; 43    ; 43   ;
+; Unconstrained Output Ports      ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 8     ; 8    ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clk    ; clk   ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; go         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; i[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; i[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; i[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; i[3]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; fib[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fib[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fib[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fib[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fib[4]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fib[5]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fib[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fib[7]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; go         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; i[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; i[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; i[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; i[3]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; fib[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fib[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fib[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fib[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fib[4]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fib[5]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fib[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fib[7]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Tue Jul 30 12:55:50 2019
+Info: Command: quartus_sta fibo -c fibo
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'fibo.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.883
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.883             -22.017 clk 
+Info (332146): Worst-case hold slack is 0.358
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.358               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -40.000 clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.687
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.687             -16.625 clk 
+Info (332146): Worst-case hold slack is 0.312
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.312               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -40.000 clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.035
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.035              -0.340 clk 
+Info (332146): Worst-case hold slack is 0.187
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.187               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -42.019 clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4773 megabytes
+    Info: Processing ended: Tue Jul 30 12:55:55 2019
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:03
+
+
