@@ -1,9 +1,9 @@
 # VHDL_Fibonacci
 
-##Install
+## Install
 These examples use ModelSim and Quartus from Intel FPGA, GIT, Visual Studio Code, make sure they are installed locally on your computer before proceeding.
 
-##Usage
+## Usage
 1-Grab a copy of this repository to your computer's local folder (i.e. C:\projects):
 
      $ cd projects
