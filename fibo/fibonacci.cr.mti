@@ -1,0 +1,82 @@
+C:/projects/fibonacci/adder_8bit.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\projects\fibonacci\adder_8bit.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity adder_8bit
+-- Compiling architecture rtl of adder_8bit
+
+} {} {}} C:/projects/fibonacci/comp_neq.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\projects\fibonacci\comp_neq.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity comp_equ
+-- Compiling architecture rtl of comp_equ
+
+} {} {}} C:/projects/fibonacci/fibo_dp.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\projects\fibonacci\fibo_dp.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity fibo_dp
+-- Compiling architecture rtl of fibo_dp
+
+} {} {}} C:/projects/fibonacci/mux2_1.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\projects\fibonacci\mux2_1.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity mux2_1
+-- Compiling architecture rtl of mux2_1
+
+} {} {}} C:/projects/fibonacci/count_dec.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\projects\fibonacci\count_dec.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity count_dec
+-- Compiling architecture rtl of count_dec
+
+} {} {}} C:/projects/fibonacci/fibo.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\projects\fibonacci\fibo.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity fibo
+-- Compiling architecture rtl of fibo
+
+} {} {}} C:/projects/fibonacci/fibo_fsm.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/projects/fibonacci/fibo_fsm.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity fibo_fsm
+-- Compiling architecture rtl of fibo_fsm
+
+} {} {}} C:/projects/fibonacci/par_reg_8bit_load.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\projects\fibonacci\par_reg_8bit_load.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity reg_par_8bit_load
+-- Compiling architecture rtl of reg_par_8bit_load
+
+} {} {}} C:/projects/fibonacci/fibo_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/projects/fibonacci/fibo_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity fibo_tb
+-- Compiling architecture behav of fibo_tb
+
+} {} {}}
